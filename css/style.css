@@ -1,0 +1,113 @@
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+h1{
+  font-size: 30px;
+}
+
+.flexContainer{
+display: flex;
+flex-direction:row;
+flex-wrap: wrap;
+justify-content:space-between;
+align-items: flex-start;
+align-content: flex-start;
+
+text-align: center;
+}
+
+.flexContainer > *{
+  width: 200px;
+  height: 200px;
+  margin: 5px auto;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+}
+
+.uglyWrapper{
+  position:relative;
+}
+
+button{
+  display:block;
+  margin: 1.5em auto;
+  padding: 0.25em 3em;
+}
+
+.flexContainer > .uglyWrapper span{
+  position: absolute;
+  left:0px;
+  line-height: 40px;
+  top:80px;
+  width:100%;
+
+  /*rabbit-hole: what if you wanted a perfectly justified caption?*/
+  /*width:50%;
+  margin: 0 auto;*/
+
+  color:white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#flexClearfix,
+#guidebookMain,
+#justweekendMain{
+  flex-basis: -webkit-fill-available;
+  flex-basis: -moz-available;
+  flex-basis: fill;
+  height: auto;
+}
+
+@media (min-width: 950px){
+  *{
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  h1{
+    font-size: 60px;
+  }
+  .flexContainer > *{
+    width: 300px;
+    height: 300px;
+  }
+  img{
+    width: 300px;
+    height: 300px;
+  }
+  .flexContainer > .uglyWrapper span{
+    position: absolute;
+    left:0px;
+    line-height: 60px;
+    top:120px;
+    width:100%;
+  }
+}
+
+@media (min-width: 1550px){
+  *{
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+  h1{
+    font-size: 80px;
+  }
+  .flexContainer > *{
+    width: 500px;
+    height: 500px;
+  }
+  img{
+    width: 500px;
+    height: 500px;
+  }
+  .flexContainer > .uglyWrapper span{
+    position: absolute;
+    left:0px;
+    line-height: 80px;
+    top:210px;
+    width:100%;
+  }
+}
